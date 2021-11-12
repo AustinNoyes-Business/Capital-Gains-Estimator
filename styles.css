@@ -99,7 +99,6 @@
   @media screen and (max-width: 960px) {
     .navbar__container {
       display: flex;
-      justify-content: space-between;
       height: 80px;
       z-index: 1;
       width: 100%;
@@ -120,7 +119,7 @@
     }
   
     .navbar__menu.active {
-      background: #131313;
+      background: #4286f4;
       top: 100%;
       opacity: 1;
       transition: all 0.5s ease;
@@ -203,7 +202,7 @@
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
-    height: 90%;
+    height: 0%;
     text-align: center;
     padding: 30px;
   }
@@ -273,6 +272,16 @@
     width: 100%;
   }
 
+  .main__content span {
+    background-color: #fff;
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    font-weight: bold;
+  }
+
   .main__content h1 {
     font-size: 4rem;
     background-color: #1e3c72;
@@ -287,7 +296,7 @@
 
   .main__content h2 {
     font-size: 2rem;
-    background: #fff;
+    background: #1e3c72;
     background-size: 100%;
     -webkit-background-clip: text;
     -moz-background-clip: text;
@@ -298,10 +307,274 @@
 
   .main__content p {
     font-size: 25px;
+    font-weight: bold;
     background-color: #1e3c72;
     -webkit-background-clip: text;
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent;
     -moz-text-fill-color: transparent;
     padding-bottom: 3%;
+  }
+
+  .main__btn {
+    font-size: 1.8rem;
+    background: #1e3c72;
+    padding: 20px 60px;
+    border: none;
+    border-radius: 4px;
+    margin-top: 2rem;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.35s;
+    outline: none;
+  }
+
+  .main__btn a {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .main__btn:after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #fd1d1d;
+    transition: all 0.35s;
+    border-radius: 4px;
+  }
+
+  .main__btn:hover {
+    color: #fff;
+  }
+
+  .main__btn:hover:after {
+    width: 100%;
+  }
+
+  .main__img--container {
+    text-align: center;
+  }
+
+  .main__img--card {
+    margin: 10px;
+    height: 500px;
+    width: 500px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+    background-image: linear-gradient(to left, #4286f4 0%, #1e3c72 100%);
+  }
+
+  /* Icon Styling */
+  .fa-file-invoice-dollar,
+  .fa-users {
+    font-size: 14rem;
+  }
+
+  #card-2 {
+    background: #1e3c72;
+  }
+
+  /* Mobile Responsive */
+  @media screen and (max-width: 1100px) {
+    .main__container {
+      display: grid;
+      grid-template-columns: 1fr;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      margin: 0 auto;
+      height: 90%;
+    }
+
+    .main__img--container {
+      display: flex;
+      justify-content: center;
+    }
+
+    .main__img--card {
+      height: 425px;
+      width: 425px;
+    }
+
+    .main__content {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+
+    .main__content h1 {
+      font-size: 2.5rem;
+      margin-top: 2rem;
+    }
+
+    .main__content h2 {
+      font-size: 3rem;
+    }
+
+    .main__content p {
+      margin-top: 1rem;
+      font-size: 1.5rem;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .main__img--card {
+      width: 250px;
+      height: 250px;
+    }
+
+    .fa-users, .fa-file-invoice-dollar {
+      font-size: 4rem;
+    }
+
+    .main__content h1 {
+      font-size: 2rem;
+      margin-top: 3rem;
+    }
+
+    .main__content h2 {
+      font-size: 2rem;
+    }
+
+    .main__content p {
+      margin-top: 2rem;
+    }
+
+    .main__btn {
+      padding: 12px 36px;
+      margin: 2.5rem 0;
+    }
+  }
+
+  /* Services Section */
+  .services {
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 10rem 0;
+  }
+
+  .services h1 {
+    background-color: #4286f4;
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    margin-bottom: 2rem;
+    font-size: 3.5rem;
+  }
+
+  .services__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  .services__card {
+    margin: 50px;
+    height: 325px;
+    width: 330px;
+    line-height: 1.5;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+    background-image: linear-gradient(to left, #4286f4 0%, #1e3c72 100%);
+    transition: 0.3s ease-in;
+  }
+
+  .services__card:nth-child(1) {
+    background: #4286f4;
+    background: linear-gradient(
+      to left,
+      #4286f4,
+      #1e3c72
+    );
+  }
+
+  .services__card:nth-child(2) {
+    background: #4286f4;
+    background: linear-gradient(
+      to bottom,
+      #4286f4,
+      #1e3c72
+    );
+  }
+
+  .services__card:nth-child(3) {
+    background: #4286f4;
+    background: linear-gradient(
+      to right,
+      #4286f4,
+      #1e3c72
+    );
+  }
+
+  /* .services__card:nth-child(4) {
+    background: #4286f4;
+    background: linear-gradient(
+      to top,
+      #4286f4,
+      #1e3c72
+    );
+  } */
+
+  .services__card h2 {
+    text-align: center;
+  }
+
+  .services__card p {
+    text-align: center;
+    margin-top: 24px;
+    font-size: 20px;
+  }
+
+  .services__btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+  }
+
+  .services__card button {
+    color: #fff;
+    padding: 14px 24px;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    background: #131313;
+    font-size: 1rem;
+  }
+
+  .services__card button:hover {
+    cursor: pointer;
+  }
+
+  .services__card:hover {
+    transform: scale(1.075);
+    transition: 0.3s ease-in;
+    cursor: pointer;
+  }
+
+  @media screen and (max-width: 1300px) {
+    .services__wrapper {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .services__wrapper {
+      grid-template-columns: 1fr;
+    }
   }
