@@ -3,11 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Capital Gains Estimator</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Static Template</title>
     <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
-     integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
-     crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
   </head>
   <body>
     <!-- Navbar Section -->
@@ -21,13 +25,13 @@
         </div>
         <ul class="navbar__menu">
           <li class="navbar__item">
-            <a href="#fund-library" class="navbar__links" id="home-page">Fund Library</a>
+            <button class="navbar__links" onClick="document.getElementById('fund').scrollIntoView();">Fund Library</button>
           </li>
           <li class="navbar__item">
-            <a href="#portfolio-library" class="navbar__links" id="home-page">Portfolio Library</a>
+            <button class="navbar__links" onClick="document.getElementById('fund').scrollIntoView();">Portfolio Library</button>
           </li>
           <li class="navbar__item">
-            <a href="#estimator-tool" class="navbar__links" id="home-page">Estimator Tool</a>
+            <button class="navbar__links" onClick="document.getElementById('fund').scrollIntoView();">Estimator Tool</button>
           </li>
           <li class="navbar__btn">
             <a href="#sign-up" class="button" id="signup">Sign Up</a>
@@ -79,6 +83,134 @@
           <p>Predict and Plan</p>
           <div class="services__btn"><button>Get Started</button></div>
         </div>
+      </div>
+    </div>
+
+    <!-- Fund Library Section -->
+    <div class="fund" id="fund">
+      <div class="fund__container">
+        <h1>Fund Library</h1>
+
+        <div class="row_user">
+          <div class="label_title">
+            <label for="fundticker">Fund Ticker</label>
+          </div>
+          <div class="textbox">
+            <input
+              type="text"
+              id="fundticker"
+              name="fundticker"
+              placeholder="Example: AGTHX"
+            />
+          </div>
+          <div class="label">
+            <label for="short-low">Short Term Capital Gain (Low) %</label>
+          </div>
+          <div class="textbox">
+            <input
+              type="number"
+              id="short-low"
+              name="short-low"
+              placeholder="Enter %..."
+            />
+          </div>
+          <div class="label">
+            <label for="short-high">Short Term Capital Gain (High) %</label>
+          </div>
+          <div class="textbox">
+            <input
+              type="number"
+              id="short-high"
+              name="short-high"
+              placeholder="Enter %..."
+            />
+          </div>
+          <div class="label">
+            <label for="long-low">Long Term Capital Gain (Low) %</label>
+          </div>
+          <div class="textbox">
+            <input
+              type="number"
+              id="long-low"
+              name="long-low"
+              placeholder="Enter %..."
+            />
+          </div>
+          <div class="label">
+            <label for="long-high">Long Term Capital Gain (High) %</label>
+          </div>
+          <div class="textbox">
+            <input
+              type="number"
+              id="long-high"
+              name="long-high"
+              placeholder="Enter %..."
+            />
+          </div>
+        </div>
+
+        <div class="row_button">
+          <!-- <button class="main_btn" id="main_btn"><a href="#">Submit Fund</button></a> -->
+          <button class="main_btn" id="main_btn" type="submit">
+            <span>Submit Fund</span>
+          </button>
+        </div>
+
+        <div class="row_fund-frame">
+          <!-- Static Labels (no change) -->
+          <div class="user-fund-name">
+            <label>Fund Name:</label>
+          </div>
+          <div class="user-fund-ticker">
+            <label>Fund Ticker:</label>
+          </div>
+          <div class="user-short-range">
+            <label>Short Term Cap. Gain % Range:</label>
+          </div>
+          <div class="user-long-range">
+            <label>Long Term Cap. Gain % Range:</label>
+          </div>
+          <!-- Dynamic Labels (changes based on user input) -->
+          <div class="fund-name">
+            <label>Fund_Name</label>
+          </div>
+          <div class="fund-ticker">
+            <label>Fund_Ticker</label>
+          </div>
+          <div class="short-range">
+            <label>Short_Range</label>
+          </div>
+          <div class="long-range">
+            <label>Long_Range</label>
+          </div>
+          <div class="submitted">
+            <svg
+              class="checkmark"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 52 52"
+            >
+              <circle
+                class="checkmark__circle"
+                cx="26"
+                cy="26"
+                r="25"
+                fill="none"
+              />
+              <path
+                class="checkmark__check"
+                fill="none"
+                d="M14.1 27.2l7.1 7.2 16.7-16.8"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Josh's Portfolio Section  -->
+    <div class="portfolio" id="portfolio-library">
+      <div class="portfolio-wrapper">
+        <h1>You won't believe what Kim Kardashian is up to!!!</h1>
       </div>
     </div>
 
