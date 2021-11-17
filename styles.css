@@ -217,6 +217,10 @@
   font-size: 85px;
   margin-bottom: 24px;
   color: #4286f4;
+  animation: fadein 2s;
+  -moz-animation: fadein 2s;
+  -webkit-animation: fadein 2s;
+  -o-animation: fadein 2s;
 }
 
 .hero__heading span{
@@ -238,6 +242,10 @@
   -moz-background-clip: text;
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
+  animation: fadein 3s;
+  -moz-animation: fadein 3s;
+  -webkit-animation: fadein 3s;
+  -o-animation: fadein 3s;
 }
 
 .highlight {
@@ -271,6 +279,10 @@
   width: 100%;
   max-width: 1300px;
   padding: 0 50px;
+  animation: fadein 6s;
+  -moz-animation: fadein 6s;
+  -webkit-animation: fadein 6s;
+  -o-animation: fadein 6s;
 }
 
 .main__content {
@@ -333,6 +345,10 @@
   position: relative;
   transition: all 0.35s;
   outline: none;
+  animation: fadein 3s;
+  -moz-animation: fadein 3s;
+  -webkit-animation: fadein 3s;
+  -o-animation: fadein 3s;
 }
 
 .main__btn a {
@@ -376,6 +392,42 @@
   justify-content: center;
   color: #fff;
   background-image: linear-gradient(to left, #4286f4 0%, #1e3c72 100%);
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 /* Icon Styling */
@@ -562,6 +614,21 @@
   transform: scale(1.075);
   transition: 0.3s ease-in;
   cursor: pointer;
+}
+
+.services__card:nth-child(1):hover {
+  -webkit-box-shadow: -2px -1px 12px 2px #000000;
+  box-shadow: -2px -1px 12px 2px #000000;
+}
+
+.services__card:nth-child(2):hover {
+  -webkit-box-shadow: 0px -1px 12px 2px #000000;
+  box-shadow: 0px -1px 12px 2px #000000;
+}
+
+.services__card:nth-child(3):hover {
+  -webkit-box-shadow: 2px -1px 12px 2px #000000;
+  box-shadow: 2px -1px 12px 2px #000000;
 }
 
 @media screen and (max-width: 1300px) {
@@ -819,4 +886,165 @@ textarea {
   100% {
     box-shadow: inset 0px 0px 0px 72px #fd1d1d;
   }
+}
+
+/* Portfolio Library Section */
+.portfolio {
+  background: #1e3c72;
+  padding-top: 25px;
+}
+
+.portfolio__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.portfolio__container h1 {
+  font-size: 4rem;
+  color: #fff;
+  grid-column: 1 / span 3;
+  justify-self: center;
+  padding-bottom: 15px;
+}
+
+.port_row_user {
+  grid-column: 1;
+  justify-self: center;
+  padding-left: 5px;
+  padding-top: 2rem;
+}
+
+.port_label_title {
+  font-size: 30px;
+  padding: 0 12px 6px 0;
+  color: #fff;
+  font-weight: bold;
+}
+
+.port_label {
+  font-size: 23px;
+  padding: 18px 12px 6px 0;
+  color: #fff;
+  font-weight: bold;
+}
+
+.portfolio_textbox {
+  padding-left: 10px;
+  padding-top: 10px;
+  width: 225%;
+}
+
+.port_row_button {
+  grid-column: 2;
+  justify-self: center;
+}
+
+.port_main_btn {
+  color: #fff;
+  font-size: 1.8rem;
+  background: #4286f4;
+  padding: 20px 45px;
+  border: none;
+  border-radius: 4px;
+  margin-top: 10rem;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.35s;
+  outline: none;
+  text-decoration: none;
+}
+
+.port_main_btn span {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  text-decoration: none;
+}
+
+.port_main_btn span:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.port_main_btn:hover span {
+  padding-right: 25px;
+  transition: all 0.5s ease-in-out;
+}
+
+.port_main_btn:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.port_main_btn:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #fd1d1d;
+  transition: all 0.35s;
+  border-radius: 4px;
+}
+
+.port_main_btn:hover {
+  color: #fff;
+}
+
+.port_main_btn:hover:after {
+  width: 100%;
+}
+
+.port_row_frame {
+  grid-column: 3;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto auto auto;
+}
+
+.port_name,
+.user_port_name {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.port_short_gain,
+.user_short_gain {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.port_long_gain,
+.user_long_gain {
+  grid-column: 1;
+  grid-row: 3;
+}
+
+.port_submitted {
+  grid-column: 1;
+  grid-row: 4;
+}
+
+.port_name,
+.port_short_gain,
+.port_long_gain {
+  color: white;
+  font-weight: bold;
+  font-size: 30px;
+  justify-self: center;
+  padding-bottom: 5rem;
+}
+
+.user_port_name,
+.user_short_gain,
+.user_long_gain {
+  font-weight: bold;
+  font-size: 35px;
+  justify-self: center;
+  padding-top: 2.5rem;
 }

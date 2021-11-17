@@ -207,12 +207,104 @@
       </div>
     </div>
 
-    <!-- Josh's Portfolio Section  -->
+    <!-- Portfolio Library Section -->
+    <div class="portfolio" id="portfolio">
+      <div class="portfolio__container">
+        <h1>Portfolio Library</h1>
+
+        <div class="port_row_user">
+          <div class="port_label_title">
+            <label for="portfolio-title">Portfolio Name:</label>
+          </div>
+          <div class="portfolio_textbox">
+            <input
+              type="text"
+              id="portfolio-title"
+              name="portfolio-title"
+              placeholder="Example: 'Mark's Brokerage Acct'"
+            />
+          </div>
+          <div class="port_label">
+            <label for="short-gain">Short-Term Capital Gains $:</label>
+          </div>
+          <div class="portfolio_textbox">
+            <input
+              type="number"
+              id="short-gain"
+              name="short-gain"
+              placeholder="Enter $ Amount..."
+            />
+          </div>
+          <div class="port_label">
+            <label for="long-gain">Long-Term Capital Gains $:</label>
+          </div>
+          <div class="portfolio_textbox">
+            <input
+              type="number"
+              id="long-gain"
+              name="long-gain"
+              placeholder="Enter $ Amount..."
+            />
+          </div>
+        </div>
+
+        <div class="port_row_button">
+          <button class="port_main_btn" id="port_main_btn" type="submit">
+            <span>Submit Portfolio</span>
+          </button>
+        </div>
+
+        <div class="port_row_frame">
+          <!-- Static Labels (no change) -->
+          <div class="port_name">
+            <label>Portfolio Name:</label>
+          </div>
+          <div class="port_short_gain">
+            <label>Short Term Cap. Gain $ Amount:</label>
+          </div>
+          <div class="port_long_gain">
+            <label>Long Term Cap. Gain $ Amount:</label>
+          </div>
+          <!-- Dynamic Labels (changes based on user input) -->
+          <div class="user_port_name">
+            <label>User_Portfolio_Name</label>
+          </div>
+          <div class="user_short_gain">
+            <label>User_Short_Gain</label>
+          </div>
+          <div class="user_long_gain">
+            <label>User_Long_Gain</label>
+          </div>
+          <div class="port_submitted">
+            <svg
+              class="checkmark"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 52 52"
+            >
+              <circle
+                class="checkmark__circle"
+                cx="26"
+                cy="26"
+                r="25"
+                fill="none"
+              />
+              <path
+                class="checkmark__check"
+                fill="none"
+                d="M14.1 27.2l7.1 7.2 16.7-16.8"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Josh's Portfolio Section 
     <div class="portfolio" id="portfolio-library">
       <div class="portfolio-wrapper">
         <h1>You won't believe what Kim Kardashian is up to!!!</h1>
       </div>
-    </div>
+    </div> -->
 
     <script src="app.js"></script>
   </body>
